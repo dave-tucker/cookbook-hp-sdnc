@@ -55,7 +55,7 @@ You can install a different version of the SDN controller or openstack by overri
 {
   "override_attributes": {
     "hp-sdnc": {
-      "version": "1.X.Y.Z"
+      "version": "1.X.Y.Z",
       "openstack": "folsom"
     }
 }
