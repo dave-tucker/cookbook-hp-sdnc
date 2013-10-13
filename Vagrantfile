@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = ""
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
@@ -55,7 +55,7 @@ Vagrant.configure("2") do |config|
   #config.ssh.timeout   = 120
 
   # The path to the Berksfile to use with Vagrant Berkshelf
-  # config.berkshelf.berksfile_path = "./Berksfile"
+  config.berkshelf.berksfile_path = "./Berksfile"
 
   # Enabling the Berkshelf plugin. To enable this globally, add this configuration
   # option to your ~/.vagrant.d/Vagrantfile file
@@ -69,7 +69,9 @@ Vagrant.configure("2") do |config|
   # to skip installing and copying to Vagrant's shelf.
   # config.berkshelf.except = []
 
-  config.vm.provision :chef_client do |chef|
+config.omnibus.chef_version = :latest
+config.butcher.knife_config_file = '../../.chef/knife.rb'
+config.vm.provision :chef_client do |chef|
     chef.chef_server_url        = "https://chef.midgard.3:443"
     chef.validation_client_name = "chef-validator"
     chef.validation_key_path    = "/Users/dave/dev/chef-repo/.chef/chef-validator.pem"

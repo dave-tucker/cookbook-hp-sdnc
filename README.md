@@ -1,23 +1,17 @@
-hp-sdnc Cookbook
-================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+HP SDN Controller Cookbook
+==========================
+This cookbook installs the HP SDN Controller on an Ubuntu system
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
-#### packages
-- `toaster` - hp-sdnc needs toaster to brown your bagel.
+ - This cookbook currently supports Ubuntu only.
+ - Cookbook dependencies are managed by Berkshelf.
+ - You need to supply your own .deb package and place it in "files/default/"
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
 
-e.g.
 #### hp-sdnc::default
 <table>
   <tr>
@@ -27,19 +21,23 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['hp-sdnc']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['hp-sdnc']['version']</tt></td>
+    <td>String</td>
+    <td>SDN Controller Version</td>
+    <td><tt>1.21.0.4151</tt></td>
+  </tr>
+    <tr>
+    <td><tt>['hp-sdnc']['openstack']</tt></td>
+    <td>String</td>
+    <td>Openstack Version</td>
+    <td><tt>grizzly</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### hp-sdnc::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `hp-sdnc` in your node's `run_list`:
 
 ```json
@@ -51,11 +49,20 @@ Just include `hp-sdnc` in your node's `run_list`:
 }
 ```
 
+You can install a different version of the controller or openstacl by overriding the default attributes:
+
+'''json
+{
+  "override_attributes": {
+    "hp-sdnc": {
+      "version": "1.X.Y.Z"
+      "openstack": "folsom"
+    }
+}
+
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write you change
@@ -65,4 +72,6 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Dave Tucker,
+Copyright 2013, Hewlett-Packard Development Company
+Licensed under the terms of the Apache v2.0 License
