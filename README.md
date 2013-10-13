@@ -73,6 +73,8 @@ Contributing
 
 License and Authors
 -------------------
-Authors: Dave Tucker,
+Authors: Dave Tucker
+
 Copyright 2013, Hewlett-Packard Development Company
+
 Licensed under the terms of the Apache v2.0 License
