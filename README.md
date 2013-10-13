@@ -49,9 +49,9 @@ Just include `hp-sdnc` in your node's `run_list`:
 }
 ```
 
-You can install a different version of the controller or openstacl by overriding the default attributes:
+You can install a different version of the SDN controller or openstack by overriding the default attributes:
 
-'''json
+```json
 {
   "override_attributes": {
     "hp-sdnc": {
@@ -59,6 +59,7 @@ You can install a different version of the controller or openstacl by overriding
       "openstack": "folsom"
     }
 }
+```
 
 Contributing
 ------------
