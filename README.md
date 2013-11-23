@@ -24,7 +24,7 @@ Attributes
     <td><tt>['hp-sdnc']['version']</tt></td>
     <td>String</td>
     <td>SDN Controller Version</td>
-    <td><tt>1.21.0.4151</tt></td>
+    <td><tt>2.0.0.4253</tt></td>
   </tr>
     <tr>
     <td><tt>['hp-sdnc']['openstack']</tt></td>

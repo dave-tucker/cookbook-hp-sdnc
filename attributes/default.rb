@@ -7,5 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
-default['hp-sdnc']['version'] = "1.21.0.4151"
+default['hp-sdnc']['version'] = "2.0.0.4253"
 default['hp-sdnc']['openstack'] = "grizzly"
