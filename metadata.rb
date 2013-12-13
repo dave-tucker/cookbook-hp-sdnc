@@ -13,10 +13,10 @@
 # limitations under the License.
 
 name             'hp-sdnc'
-maintainer       'Hewlett Packard Development Company'
+maintainer       'Hewlett Packard Development Company L.P'
 maintainer_email 'dave.j.tucker@hp.com'
-license          'All rights reserved'
-description      'Installs/Configures the HP VAN SDN Controller'
+license          'Apache License, Version 2.0'
+description      'Installs the HP VAN SDN Controller'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 

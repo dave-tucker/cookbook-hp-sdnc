@@ -70,12 +70,7 @@ Vagrant.configure("2") do |config|
   # config.berkshelf.except = []
 
 config.omnibus.chef_version = :latest
-config.butcher.knife_config_file = '../../.chef/knife.rb'
-config.vm.provision :chef_client do |chef|
-    chef.chef_server_url        = "https://chef.midgard.3:443"
-    chef.validation_client_name = "chef-validator"
-    chef.validation_key_path    = "/Users/dave/dev/chef-repo/.chef/chef-validator.pem"
-
+config.vm.provision :chef_solo do |chef|
     chef.run_list = [
         "recipe[hp-sdnc::default]"
     ]
